@@ -1,13 +1,18 @@
 version: "3.8"
 
 services:
-  api:
-    build: .
+  app:
+    image: node:18-alpine
+    container_name: ecommerce_api
+    command: sh -c "npm install && npm run dev"
     ports:
       - "3000:3000"
+    working_dir: /app
+    volumes:
+      - ./:/app
     environment:
-      DB_HOST: your-rds-endpoint.amazonaws.com
-      DB_USER: admin
-      DB_PASS: yourpassword
-      DB_NAME: ecommerce
+      - DB_HOST=zeth-ecommercedb-instance-1.c1qus6oke9k5.eu-west-1.rds.amazonaws.com
+      - DB_USER=admin
+      - DB_PASS=yourpassword
+      - DB_NAME=ecommerce
     restart: always
