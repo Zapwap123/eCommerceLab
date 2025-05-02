@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 
+// Importing the routes for the API endpoints
 const topCustomerRoute = require("./routes/topCustomers");
 const monthlySalesReportRoute = require("./routes/monthlySalesReport");
 const productsNeverOrderedRoute = require("./routes/productsNeverOrdered");
