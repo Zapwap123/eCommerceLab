@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  api:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      DB_HOST: your-rds-endpoint.amazonaws.com
+      DB_USER: admin
+      DB_PASS: yourpassword
+      DB_NAME: ecommerce
+    restart: always
