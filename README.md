@@ -22,6 +22,23 @@ Client  →  EC2 (Node.js App)  →  RDS (Aurora MySQL)
 
 ---
 
+## 🔗 Live App / API Endpoints
+
+> Base URL: `http://<your-ec2-ip>:3000` or Mine: `http://54.217.181.120:3000`
+
+| Endpoint                        | Description                           |
+| ------------------------------- | ------------------------------------- |
+| `/`                             | Root route – confirms API is live     |
+| `/api/topCustomer`              | Get the top customer(s) by Spending   |
+| `/api/monthlySalesReport`       | Get the monthly sales report          |
+| `/api/productsNeverOrdered`     | List products that were never ordered |
+| `/api/countryAverageOrderValue` | Get average order value by country    |
+| `/api/frequentBuyers`           | Get customers with frequent purchases |
+
+> Note: Replace `<your-ec2-ip>` with your actual EC2 public IP or public DNS hostname.
+
+---
+
 ## 1. AWS RDS (Aurora MySQL) Setup
 
 1. Go to **AWS RDS > Create Database**
